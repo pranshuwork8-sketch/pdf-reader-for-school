@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI PDF Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>AI PDF Assistant</h1>
+
+<div class="box">
+    <h2>Upload PDF</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdf_file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if summary %}
+        <h3>PDF Summary</h3>
+        <p>{{ summary }}</p>
+    {% endif %}
+</div>
+
+<div class="box">
+    <h2>Ask Question from PDF</h2>
+    <form method="POST">
+        <input type="text" name="question" placeholder="Ask something..." required>
+        <button type="submit">Ask AI</button>
+    </form>
+
+    {% if answer %}
+        <h3>AI Answer</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+</div>
+
+<div class="box">
+    <h2>Upload Image</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image_file" required>
+        <button type="submit">Extract Text</button>
+    </form>
+
+    {% if image_text %}
+        <h3>Extracted Text</h3>
+        <p>{{ image_text }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
