@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px;
+}
+
+.box {
+    background: white;
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px;
+}
